@@ -2,6 +2,6 @@
 #define CLIENTE_HPP
 
 void menuCliente();
-void listarSanduiches();
+void escolherLanche();
 
 #endif

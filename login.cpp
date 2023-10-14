@@ -1,18 +1,20 @@
 #include <iostream>
 #include "login.hpp"
 
+using namespace std;
+
 int login(){
     int op;
 
     while(true){
-        std::cout << "\n1- Cliente\n" << "2- Gerente" << std::endl;
-        std::cout << "Opção: ";
-        std::cin >> op;
+        cout << "\n1- Cliente\n" << "2- Gerente" << endl;
+        cout << "Opção: ";
+        cin >> op;
 
         if(op == 1){
             system("clear||cls");
-            
-            std::cout << "\n---Login efetuado com sucesso!---\n" << std::endl;
+
+            cout << "\n---Login efetuado com sucesso!---\n" << endl;
 
             break;
         } else if(op == 2){
@@ -24,7 +26,7 @@ int login(){
         } else{
             system("clear||cls");
 
-            std::cout << "\n---Opção inválida!---\n" << std::endl;
+            cout << "\n---Opção inválida!---\n" << endl;
         }
     }
 
@@ -32,30 +34,28 @@ int login(){
 }
 
 bool loginGerente(){
-    std::string usuario, senha;
+    string usuario, senha;
     int op;
 
     while(true){
-        std::cout << "\n---Login Gerente---" << std::endl;
-        std::cout << "Usuário: ";
-        std::cin >> usuario;
-        std::cout << "Senha: ";
-        std::cin >> senha;
+        cout << "\n---Login Gerente---" << endl;
+        cout << "Usuário: ";
+        cin >> usuario;
+        cout << "Senha: ";
+        cin >> senha;
 
         if(usuario == "admin" && senha == "admin"){
             system("clear||cls");
 
-            std::cout << "\n---Login efetuado com sucesso!---\n" << std::endl;
+            cout << "\n---Login efetuado com sucesso!---\n" << endl;
 
             return true;
         } else{
             do{
-                system("clear||cls");
-
-                std::cout << "\n---Usuário ou senha incorretos!---\n" << std::endl;
-                std::cout << "1- Tentar novamente\n" << "2- Voltar" << std::endl;
-                std::cout << "Opção: ";
-                std::cin >> op;
+                cout << "\n---Usuário ou senha incorretos!---\n" << endl;
+                cout << "1- Tentar novamente\n" << "2- Voltar" << endl;
+                cout << "Opção: ";
+                cin >> op;
 
                 if(op == 2){
                     system("clear||cls");
