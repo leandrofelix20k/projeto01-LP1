@@ -1,2 +1,10 @@
+X-Bacon
+8.5
 X-Burguer
 5
+X-Frango
+7.5
+X-Salada
+6
+X-Tudo
+11.5

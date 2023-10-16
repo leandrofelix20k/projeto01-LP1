@@ -1,2 +1,10 @@
-Laranja
+Goiaba
 4.5
+Laranja
+5
+Manga
+6
+Morango
+6
+Uva
+6.5

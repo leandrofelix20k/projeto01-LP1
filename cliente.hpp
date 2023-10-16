@@ -3,5 +3,6 @@
 
 void menuCliente();
 void escolherLanche();
+void excluirItem();
 
 #endif

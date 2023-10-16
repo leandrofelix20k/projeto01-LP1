@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//Função para exibir o menu do gerente
 void menuGerente(){
     cout << "---Menu do gerente---" << endl;
     cout << "1 - Listar Sanduíches" << endl;
@@ -19,6 +20,7 @@ void menuGerente(){
     cout << "9 - Sair" << endl;
 }
 
+//Função para adicionar um novo item no mapa de sanduiches ou sucos. Recebe como parâmetro o nome do produto.
 void adicionarItem(string nomeProduto){
     string nome;
     float preco;
@@ -31,10 +33,11 @@ void adicionarItem(string nomeProduto){
     cout << "Preço: ";
     cin >> preco;
 
-    addItem(nomeProduto, nome, preco);
+    addItem(nomeProduto, nome, preco); //Faz a chamada da função para adicionar o item e o preço no mapa
 
 }
 
+//Função para alterar o preço de um item no mapa de sanduiches ou sucos. Recebe como parâmetro o nome do produto.
 void alterarPrecoItem(string nomeProduto){
     string nome;
     float novoPreco;
@@ -47,9 +50,10 @@ void alterarPrecoItem(string nomeProduto){
     cout << "Novo preço: ";
     cin >> novoPreco;
 
-    modificarPreco(nomeProduto, nome, novoPreco);
+    modificarPreco(nomeProduto, nome, novoPreco); //Faz a chamada da função para alterar o preço do item
 }
 
+//Função para excluir um item do mapa de sanduiches ou sucos. Recebe como parâmetro o nome do produto.
 void excluirItem(string nomeProduto){
     string nome;
 
@@ -58,5 +62,5 @@ void excluirItem(string nomeProduto){
     cout << "Nome: ";
     cin >> nome;
 
-    removerItem(nomeProduto, nome);
+    removerItem(nomeProduto, nome); //Faz a chamada da função para remover o item do mapa
 }

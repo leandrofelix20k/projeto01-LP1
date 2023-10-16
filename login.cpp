@@ -6,26 +6,22 @@ using namespace std;
 int login(){
     int op;
 
+    //O laço é executado até que o úsuario digite uma opção válida
     while(true){
         cout << "\n1- Cliente\n" << "2- Gerente" << endl;
         cout << "Opção: ";
         cin >> op;
 
+        //Verifica se a opção está entre 1 e 2. Caso o login seja feito como gerente, é necessário ter o úsuario e senha para acessar o menu
         if(op == 1){
-            system("clear||cls");
-
             cout << "\n---Login efetuado com sucesso!---\n" << endl;
 
             break;
         } else if(op == 2){
-            system("clear||cls");
-
             if(loginGerente()){
                 break;
             }
         } else{
-            system("clear||cls");
-
             cout << "\n---Opção inválida!---\n" << endl;
         }
     }
@@ -33,6 +29,7 @@ int login(){
     return op;
 }
 
+//Função para o úsuario fazer o login como gerente.
 bool loginGerente(){
     string usuario, senha;
     int op;
@@ -45,9 +42,7 @@ bool loginGerente(){
         cin >> senha;
 
         if(usuario == "admin" && senha == "admin"){
-            system("clear||cls");
-
-            cout << "\n---Login efetuado com sucesso!---\n" << endl;
+            cout << "\n---Login efetuado com sucesso!---\n" << endl; //Retorna true caso o úsuario digite o úsuario e senha corretos
 
             return true;
         } else{
@@ -58,13 +53,9 @@ bool loginGerente(){
                 cin >> op;
 
                 if(op == 2){
-                    system("clear||cls");
-
-                    return false;
+                    return false; //E false caso o úsuario deseje voltar para a tela inicial de login
                 }
             } while(op != 1);
         }
     }
-
-    return false;
 }
