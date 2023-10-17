@@ -28,7 +28,8 @@ void adicionarItem(string nomeProduto){
     cout << "\n---Adicionar novo " << nomeProduto << endl;
 
     cout << "Nome: ";
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome);
 
     cout << "Preço: ";
     cin >> preco;
@@ -45,7 +46,8 @@ void alterarPrecoItem(string nomeProduto){
     cout << "\n---Alterar preço do " << nomeProduto << endl;
 
     cout << "Nome: ";
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome);
 
     cout << "Novo preço: ";
     cin >> novoPreco;
@@ -60,7 +62,8 @@ void excluirItem(string nomeProduto){
     cout << "\n---Excluir " << nomeProduto << endl;
 
     cout << "Nome: ";
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome);
 
     removerItem(nomeProduto, nome); //Faz a chamada da função para remover o item do mapa
 }

@@ -172,7 +172,7 @@ void exibirCarrinho(){
     cout << fixed << setprecision(2); //Define a precisão de duas casas decimais para os valores float para a impressão
 
     if(carrinho.empty()){
-        cout << "\n---Carrinho vazio!---" << endl; //Imprime uma mensagem caso o carrinho esteja vazio
+        cout << "\n---Carrinho vazio!---\n" << endl; //Imprime uma mensagem caso o carrinho esteja vazio
     } else{
         cout << "\n---Carrinho---" << endl;
         //Laço para percorrer o mapa e imprimir os itens e seus preços

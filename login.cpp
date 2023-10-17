@@ -37,9 +37,12 @@ bool loginGerente(){
     while(true){
         cout << "\n---Login Gerente---" << endl;
         cout << "Usuário: ";
-        cin >> usuario;
+        cin.ignore();
+        getline(cin, usuario);
+
         cout << "Senha: ";
-        cin >> senha;
+        cin.ignore();
+        getline(cin, senha);
 
         if(usuario == "admin" && senha == "admin"){
             cout << "\n---Login efetuado com sucesso!---\n" << endl; //Retorna true caso o úsuario digite o úsuario e senha corretos

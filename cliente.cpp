@@ -45,7 +45,8 @@ void escolherLanche(){
 
             //Lẽ o nome do item que o úsuario deseja
             cout << "\nNome do " << nomeProduto << ": ";
-            cin >> nomeItem;
+            cin.ignore();
+            getline(cin, nomeItem);
 
             addItemCarrinho(nomeProduto, nomeItem); //Faz a chamada da função para adicionar o item no carrinho
         } else if(op == 3){
@@ -63,7 +64,8 @@ void excluirItem(){
     cout << "\n---Excluir Item---" << endl;
 
     cout << "Nome do item: ";
-    cin >> nomeItem;
+    cin.ignore();
+    getline(cin, nomeItem);
 
     removerItemCarrinho(nomeItem); //Faz a chamada da função para remover o item do carrinho
 }
