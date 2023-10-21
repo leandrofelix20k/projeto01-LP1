@@ -4,6 +4,7 @@
 using namespace std;
 
 void menuGerente();
+bool loginGerente();
 void adicionarItem(string nomeProduto);
 void alterarPrecoItem(string nomeProduto);
 void excluirItem(string nomeProduto);

@@ -20,6 +20,38 @@ void menuGerente(){
     cout << "9 - Sair" << endl;
 }
 
+bool loginGerente(){
+    string usuario, senha;
+    int op;
+
+    while(true){
+        cout << "\n---Login Gerente---" << endl;
+        cin.ignore(); //Limpa o buffer do teclado
+        cout << "Usuário: ";
+        getline(cin, usuario);
+
+        cout << "Senha: ";
+        getline(cin, senha);
+
+        if(usuario == "admin" && senha == "admin"){
+            system("clear||cls");
+
+            return true;
+        } else{
+            do{
+                cout << "\n---Usuário ou senha incorretos!---\n" << endl;
+                cout << "1- Tentar novamente\n" << "2- Voltar" << endl;
+                cout << "Opção: ";
+                cin >> op;
+
+                if(op == 2){
+                    return false; //E false caso o úsuario deseje voltar para a tela inicial de login
+                }
+            } while(op != 1);
+        }
+    }
+}
+
 //Função para adicionar um novo item no mapa de sanduiches ou sucos. Recebe como parâmetro o nome do produto.
 void adicionarItem(string nomeProduto){
     string nome;
@@ -34,6 +66,7 @@ void adicionarItem(string nomeProduto){
     cout << "Preço: ";
     cin >> preco;
 
+    system("clear||cls");
     addItem(nomeProduto, nome, preco); //Faz a chamada da função para adicionar o item e o preço no mapa
 
 }
@@ -52,6 +85,7 @@ void alterarPrecoItem(string nomeProduto){
     cout << "Novo preço: ";
     cin >> novoPreco;
 
+    system("clear||cls");
     modificarPreco(nomeProduto, nome, novoPreco); //Faz a chamada da função para alterar o preço do item
 }
 
@@ -65,5 +99,6 @@ void excluirItem(string nomeProduto){
     cin.ignore();
     getline(cin, nome);
 
+    system("clear||cls");
     removerItem(nomeProduto, nome); //Faz a chamada da função para remover o item do mapa
 }

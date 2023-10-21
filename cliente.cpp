@@ -48,11 +48,15 @@ void escolherLanche(){
             cin.ignore();
             getline(cin, nomeItem);
 
+            system("clear||cls");
             addItemCarrinho(nomeProduto, nomeItem); //Faz a chamada da função para adicionar o item no carrinho
         } else if(op == 3){
+            system("clear||cls");
+            
             cout << endl; //Caso o úsuario deseje sair, pula uma linha e encerra o laço
             break;
         } else{
+            system("clear||cls");
             cout << "\n---Opção inválida!---\n" << endl; //Caso o úsuario digite uma opção fora do intervalo de 1 a 3, mostra uma mensagem de erro
         }
     }
@@ -67,5 +71,6 @@ void excluirItem(){
     cin.ignore();
     getline(cin, nomeItem);
 
+    system("clear||cls");
     removerItemCarrinho(nomeItem); //Faz a chamada da função para remover o item do carrinho
 }
