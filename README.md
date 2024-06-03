@@ -1,4 +1,4 @@
-# Projeto 01 de Linguagem de Programação I 2023.2
+# Projeto 01 - Linguagem de Programação I 2023.2
 
 ## Sobre o Projeto:
 O projeto consiste na criação de um sistema para o gerenciamento de pedidos de uma
